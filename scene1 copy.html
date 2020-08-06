@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Camera Coach</title>
+</head>
+<body>
+  <div class="practice__wrapper">
+    <h2>ボケ感のある写真を撮ってみよう！</h2>
+      <div class="practice__content">
+        <div class="word__explanation__wrapper">
+          <p class="tab__title">用語解説</p>
+          <div id="example" class="word__explanation__tab">
+            <ul class="tabs__menu">
+              <li class="tab__left"
+                  v-bind:class="{active: activeTab === 'tabs-1'}"
+                  v-on:click="activeTab = 'tabs-1'"
+              >F値</li>
+              <li v-bind:class="{active: activeTab === 'tabs-2'}"
+                  v-on:click="activeTab = 'tabs-2'"
+              >SS</li>
+              <li class="tab__right"
+                  v-bind:class="{active: activeTab === 'tabs-3'}"
+                  v-on:click="activeTab = 'tabs-3'"
+              >ISO</li>
+            </ul>
+            <section class="tabs__content">
+              <section v-show="activeTab === 'tabs-1'">
+                <p>F値は"絞り"とも言われる。
+                  <br>ボケ量と明るさをコントロール出来る。
+                  <br>F値が小さくなるにつれて
+                  <br>・ボケやすくなる
+                  <br>・写真全体が明るくなる
+                </p>
+              </section>
+              <section v-show="activeTab === 'tabs-2'">
+                <p>
+                  SSはシャッタースピードの略。
+                  <br>ブレと明るさをコントロール出来る。
+                  <br>SSが遅くなるほど、
+                  <br>・ブレやすくなる
+                  <br>・写真全体が明るくなる
+                </p>
+              </section>
+              <section v-show="activeTab === 'tabs-3'">
+                <p>
+                  ISOは感度のこと。
+                  <br>明るさをコントロール出来る。
+                  <br>ISOが大きくなるにつれて
+                  <br>・ノイズが発生し写真に悪影響を与える
+                  <br>・写真全体が明るくなる
+                </p>
+              </section>
+            </section>
+          </div>
+        </div>
+        <div class="prevew__wrapper">
+          <image class="preview__content" src="image/preview.png"></image>
+        </div>
+      </div>
+    <div class="btn__wrapper">
+      <a href="#" onclick="window.history.back()" class="btn scene1__page__btn">前に戻る</a>
+      <a href="top.html" class="btn scene1__page__btn">TOPページへ</a>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
