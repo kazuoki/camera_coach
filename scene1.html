@@ -12,6 +12,7 @@
   <div id="practice" class="practice__wrapper">
     <h2>満天の星空を撮ってみよう！</h2>
     <div class="practice__content">
+      <!-- 用語解説タブ -->
       <div class="word__explanation__wrapper">
         <p class="tab__title">用語解説</p>
         <div class="word__explanation__tab">
@@ -60,67 +61,69 @@
           </section>
         </div>
       </div>
+      <!-- 撮影結果予想イメージ -->
       <div class="preview__wrapper">
         <image id="preview" class="preview__content" src="image/preview3.png"></image>
-        <p class="image__preview__text">撮影結果の予想イメージ</p>
+        <p class="image__preview__text">撮影予想イメージ</p>
       </div>
     </div>
-    <div class="advice__message__wrapper">
-      <div v-show="activeMessage === 'advice__message1'"
-            v-bind:class="{advice__message: activeMessage === 'advice__message1',
-            message1: activeMessage === 'advice__message1'}">
-        <p>F値を2.8に設定してみよう！
-          <br>光の取り込み量が多くなるから星が映りやすくなるよ！
-        </p>
-      </div>
-      <div v-show="activeMessage === 'advice__message2'"
-            v-bind:class="{advice__message: activeMessage === 'advice__message2',
-            message2: activeMessage === 'advice__message2'}">
-        <p>SSを30sに設定してみよう！
-          <br>光を取り込む時間が長くなるから星が映りやすくなるよ！
-        </p>
-      </div>
-      <div v-show="activeMessage === 'advice__message3'"
-            v-bind:class="{advice__message: activeMessage === 'advice__message3',
-            message3: activeMessage === 'advice__message3'}">
-        <p>ISOを1600に設定してみよう！
-          <br>感度が高いと写真全体が明るくなって星が映りやすくなるよ！
-        </p>
-      </div>
-    </div>
-    <div id="number" class="switch__wrapper">
-      <ul>
-        <li>
-          <p v-on:mouseover="activeTab = 'tabs-1',activeMessage = 'advice__message1'">F値：
-            <select name="keisan" id="f" class="toggle__value" onchange="toggle()">
-              <option value="1">22</option>
-              <option value="2">9.0</option>
-              <option value="3">2.8</option>
-            </select>
-          </p>
-        </li>
-        <li>
-          <p v-on:mouseover="activeTab = 'tabs-2',activeMessage = 'advice__message2'">SS：
-          <select name="" id="ss" class="toggle__value" onchange="toggle()">
-            <option value="1">1/125s</option>
-            <option value="2">15s</option>
-            <option value="3">30s</option>
-          </select>
-        </p>
-        </li>
-        <li>
-          <p v-on:mouseover="activeTab = 'tabs-3',activeMessage = 'advice__message3'">ISO：
-            <select name="" id="iso" class="toggle__value" onchange="toggle()">
-              <option value="1">100</option>
-              <option value="2">1600</option>
-              <option value="3">6400</option>
-            </select>
-          </p>
-        </li>
-      </ul>
-    </div>
+    <!-- アドバイスメッセージ -->
     <div class="shutter__wrapper">
-      <a href="#" class="btn shutter__btn"><i class="fa fa-camera" aria-hidden="true"></i>シャッター</a>
+      <div class="advice__message__wrapper">
+        <div v-show="activeMessage === 'advice__message1'"
+              v-bind:class="{advice__message: activeMessage === 'advice__message1',
+              message1: activeMessage === 'advice__message1'}">
+          <p><span class="instruction__word">F値を2.8に設定してみよう！</span>
+            <br>光の取り込み量が多くなるから星が映りやすくなるよ！
+          </p>
+        </div>
+        <div v-show="activeMessage === 'advice__message2'"
+              v-bind:class="{advice__message: activeMessage === 'advice__message2',
+              message2: activeMessage === 'advice__message2'}">
+          <p><span class="instruction__word">SSを30sに設定してみよう！</span>
+            <br>光を取り込む時間が長くなるから星が映りやすくなるよ！
+          </p>
+        </div>
+        <div v-show="activeMessage === 'advice__message3'"
+              v-bind:class="{advice__message: activeMessage === 'advice__message3',
+              message3: activeMessage === 'advice__message3'}">
+          <p><span class="instruction__word">ISOを1600に設定してみよう！</span>
+            <br>感度が高いと写真全体が明るくなって星が映りやすくなるよ！
+          </p>
+        </div>
+      </div>
+      <div id="number" class="switch__wrapper">
+        <ul>
+          <li>
+            <p v-on:mouseover="activeTab = 'tabs-1',activeMessage = 'advice__message1'">F値：
+              <select name="keisan" id="f" class="toggle__value" onchange="toggle()">
+                <option value="1">22</option>
+                <option value="2">9.0</option>
+                <option value="3">2.8</option>
+              </select>
+            </p>
+          </li>
+          <li>
+            <p v-on:mouseover="activeTab = 'tabs-2',activeMessage = 'advice__message2'">SS：
+            <select name="" id="ss" class="toggle__value" onchange="toggle()">
+              <option value="1">1/125s</option>
+              <option value="2">15s</option>
+              <option value="3">30s</option>
+            </select>
+          </p>
+          </li>
+          <li>
+            <p v-on:mouseover="activeTab = 'tabs-3',activeMessage = 'advice__message3'">ISO：
+              <select name="" id="iso" class="toggle__value" onchange="toggle()">
+                <option value="1">100</option>
+                <option value="2">1600</option>
+                <option value="3">6400</option>
+              </select>
+            </p>
+          </li>
+        </ul>
+        <a href="#" class="btn shutter__btn"><i class="fa fa-camera" aria-hidden="true"></i>シャッター</a>
+      </div>
     </div>
     <div class="btn__wrapper">
       <a href="#" onclick="window.history.back()" class="btn scene1__page__btn">前に戻る</a>
