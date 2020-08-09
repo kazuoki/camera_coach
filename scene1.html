@@ -32,9 +32,16 @@
           <section class="tabs__content">
             <section v-show="activeTab === 'tabs-1'">
               <p>F値は"絞り"とも言われる。
-                <br><span class="important__word">ボケ量</span>と
-                <span class="important__word">明るさ</span>をコントロール出来る。
-                <br>F値が小さくなるにつれて
+                <br>
+                <span class="important__word">
+                  ボケ量
+                </span>
+                と
+                <span class="important__word">
+                  明るさ
+                </span>
+                をコントロール出来る。
+                <br><span class="only__underline">F値が小さくなるにつれて</span>
                 <br>・ボケやすくなる
                 <br>・写真全体が明るくなる
               </p>
@@ -42,9 +49,16 @@
             <section v-show="activeTab === 'tabs-2'">
               <p>
                 SSはシャッタースピードの略。
-                <br><span class="important__word">ブレ</span>と
-                <span class="important__word">明るさ</span>をコントロール出来る。
-                <br>SSが遅くなるにつれて、
+                <br>
+                <span class="important__word">
+                  ブレ
+                </span>
+                と
+                <span class="important__word">
+                  明るさ
+                </span>
+                をコントロール出来る。
+                <br><span class="only__underline">SSが長くなるにつれて</span>
                 <br>・ブレやすくなる
                 <br>・写真全体が明るくなる
               </p>
@@ -52,8 +66,12 @@
             <section v-show="activeTab === 'tabs-3'">
               <p>
                 ISOは感度のこと。
-                <br><span class="important__word">明るさ</span>をコントロール出来る。
-                <br>ISOが大きくなるにつれて
+                <br>
+                <span class="important__word">
+                  明るさ
+                </span>
+                をコントロール出来る。
+                <br><span class="only__underline">ISOが大きくなるにつれて</span>
                 <br>・ノイズが発生し写真に悪影響を与える
                 <br>・写真全体が明るくなる
               </p>
@@ -91,6 +109,11 @@
             <br>感度が高いと写真全体が明るくなって星が映りやすくなるよ！
           </p>
         </div>
+        <p class="onepoint">
+          <img id="onepoint" src="image/brightness3.png" alt="">
+          </img>
+          <!-- 暗くて何も見えない (_ _) -->
+        </p>
       </div>
       <div id="number" class="switch__wrapper">
         <ul>
@@ -122,7 +145,13 @@
             </p>
           </li>
         </ul>
-        <a href="#" class="btn shutter__btn"><i class="fa fa-camera" aria-hidden="true"></i>シャッター</a>
+        <span id="dummy__shutter"　class="btn shutter__btn"><i class="fa fa-camera" aria-hidden="true"></i>シャッター</span>
+        <div class="overlay">
+          <div class="popup-content"></div>
+        </div>
+        <div id="shutter">
+          <a href="image/scene1.png" class="btn shutter__btn popup"><i class="fa fa-camera" aria-hidden="true"></i>シャッター</a>
+        </div>
       </div>
     </div>
     <div class="btn__wrapper">

@@ -117,13 +117,13 @@ h1,h2,p{
   border-radius: 24px;
 }
 
-/* -----トップページ----- */
+/* ---------------トップページ--------------- */
 .top__wrapper{
   background-image: url("image/top.jpg");
   min-height: 100vh;
-  background-position:left top;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: auto auto;
   text-align: center;
 }
 .top__wrapper h1{
@@ -149,13 +149,13 @@ h1,h2,p{
   transition: 0.3s;
 }
 
-/* 撮影場面選択ページ */
+/* ---------------撮影場面選択ページ--------------- */
 .scene__select__wrapper{
   background-image: url("image/select.jpg");
   min-height: 100vh;
-  background-position:left top;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: auto auto;
   text-align: center;
 }
 .scene__select__wrapper h2{
@@ -202,10 +202,10 @@ h1,h2,p{
   transition: 0.3s;
 }
 .btn__wrapper{
-  margin-top:5%;
+  margin-top:44px;
 }
 
-/* -----撮影シーン１----- */
+/* ---------------撮影シーン１--------------- */
 .practice__wrapper{
   background-image: url("image/scene2-back.jpg");
   min-height: 100vh;
@@ -260,7 +260,7 @@ h1,h2,p{
   margin:0px 22px;
 }
 
-/* -----タブメニュー----- */
+/* ---------------タブメニュー--------------- */
 /* タブの基本スタイル */
 .tabs__menu li{
   display: block;
@@ -317,12 +317,20 @@ h1,h2,p{
   color:#ff5050;
   background:linear-gradient(transparent 70%, #FFFF00 0%);
 }
-/* -----設定のアドバイスメッセージ----- */
+.only__underline{
+  background:linear-gradient(transparent 70%, #FFFF00 0%);
+  font-weight: bold;
+}
+/* ---------------設定のアドバイスメッセージ--------------- */
+.advice__message__wrapper{
+  position: relative;
+}
 .advice__message__wrapper p{
   text-shadow: none;
   line-height: 28px;
   color:#676767;
   padding:0 22px;
+  /* font-size: 14px; */
 }
 .instruction__word{
   font-size: 22px;
@@ -369,7 +377,20 @@ height: 0;
 .message3:after{
   left:460px;
 }
-/* -----カメラ設定切り替え----- */
+.onepoint{
+  display: inline-block;
+  position: absolute;
+  /* top:50%; */
+  left:536px;
+  top:10px;
+  /* background-color: #fff; */
+  font-size: 12px;
+  /* width: 270px; */
+}
+.onepoint img{
+  height:90px;
+}
+/* ---------------カメラ設定切り替え--------------- */
 .switch__wrapper{
   height: 60px;
   margin:0 auto;
@@ -386,10 +407,11 @@ height: 0;
   padding-left: 22px;
   border-radius: 10px;
   margin-right: 28px;
-  box-shadow:0px 0px 10px #ffffff;
+  /* box-shadow:0px 0px 10px #ffffff; */
 }
 .switch__wrapper p:hover{
-  box-shadow:0px 0px 40px #d3eaff;
+  box-shadow:0px 0px 10px #d3eaff;
+  /* box-shadow:0px 0px 10px #dbdbdb; */
 }
 .switch__wrapper select{
   font-size: 16px;
@@ -411,8 +433,61 @@ height: 0;
   padding:18px 32px;
   display: inline-block;
   margin-left:24px;
+  /* opacity : 1;
+  transform : translate(0, 45px);
+  transition : all 300ms; */
 }
 .shutter__wrapper a:hover{
   transform: scale(1.1);
   transition: 0.3s;
+}
+/* ダミーのシャッター */
+#dummy__shutter{
+  background-color: white;
+  color:#676767;
+  padding:18px 32px;
+  display: inline-block;
+  margin-left:24px;
+  opacity:0.1;
+}
+
+/* ---------------撮影結果表示ページ--------------- */
+
+/* 後ろを覆う黒い幕 */
+.overlay {
+  /* 画面いっぱいに表示 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* 他のコンテンツより上のレイヤーに表示 */
+  z-index: 10000;
+
+  /* 初期状態では非表示 */
+  display: none;
+
+  /* 透けた黒色にする */
+  background-color:rgba(0, 0, 0, 0.8);
+
+  /* マウスカーソルを手の形にする */
+  cursor: pointer;
+}
+
+/* 拡大写真の表示エリア */
+.popup-content {
+  /* 60x60で左右中央に表示する */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  text-align: center;
+
+  /* 枠をつける */
+  padding: 4px;
+  background-color: #ccc;
 }
