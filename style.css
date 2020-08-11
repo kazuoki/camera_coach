@@ -479,12 +479,12 @@ height: 0;
 .popup-content {
   /* 60x60で左右中央に表示する */
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60px;
-  height: 60px;
-  margin-top: -30px;
-  margin-left: -30px;
+  top: 25%;
+  left: 25%;
+  /* width: 60px;
+  height: 60px; */
+  /* margin-top: -30px; */
+  /* margin-left: -30px; */
   text-align: center;
 
   /* 枠をつける */

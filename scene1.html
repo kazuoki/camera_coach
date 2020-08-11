@@ -1,165 +1,170 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
-  <title>Camera Coach</title>
-</head>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="router/main.js"></script> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+    <title>single_page_application</title>
+    <!-- <title>Camera Coach</title> -->
+  </head>
 <body>
-  <div id="practice" class="practice__wrapper">
-    <h2>満天の星空を撮ってみよう！</h2>
-    <div class="practice__content">
-      <!-- 用語解説タブ -->
-      <div class="word__explanation__wrapper">
-        <p class="tab__title">用語解説</p>
-        <div class="word__explanation__tab">
-          <ul class="tabs__menu">
-            <li class="tab__left"
-                v-bind:class="{active: activeTab === 'tabs-1'}"
-                v-on:click="activeTab = 'tabs-1'"
-            >F値</li>
-            <li v-bind:class="{active: activeTab === 'tabs-2'}"
-                v-on:click="activeTab = 'tabs-2'"
-            >SS</li>
-            <li class="tab__right"
-                v-bind:class="{active: activeTab === 'tabs-3'}"
-                v-on:click="activeTab = 'tabs-3'"
-            >ISO</li>
-          </ul>
-          <section class="tabs__content">
-            <section v-show="activeTab === 'tabs-1'">
-              <p>F値は"絞り"とも言われる。
-                <br>
-                <span class="important__word">
-                  ボケ量
-                </span>
-                と
-                <span class="important__word">
-                  明るさ
-                </span>
-                をコントロール出来る。
-                <br><span class="only__underline">F値が小さくなるにつれて</span>
-                <br>・ボケやすくなる
-                <br>・写真全体が明るくなる
-              </p>
-            </section>
-            <section v-show="activeTab === 'tabs-2'">
-              <p>
-                SSはシャッタースピードの略。
-                <br>
-                <span class="important__word">
-                  ブレ
-                </span>
-                と
-                <span class="important__word">
-                  明るさ
-                </span>
-                をコントロール出来る。
-                <br><span class="only__underline">SSが長くなるにつれて</span>
-                <br>・ブレやすくなる
-                <br>・写真全体が明るくなる
-              </p>
-            </section>
-            <section v-show="activeTab === 'tabs-3'">
-              <p>
-                ISOは感度のこと。
-                <br>
-                <span class="important__word">
-                  明るさ
-                </span>
-                をコントロール出来る。
-                <br><span class="only__underline">ISOが大きくなるにつれて</span>
-                <br>・ノイズが発生し写真に悪影響を与える
-                <br>・写真全体が明るくなる
-              </p>
-            </section>
-          </section>
-        </div>
-      </div>
-      <!-- 撮影結果予想イメージ -->
-      <div class="preview__wrapper">
-        <image id="preview" class="preview__content" src="image/preview3.png"></image>
-        <p class="image__preview__text">撮影予想イメージ</p>
-      </div>
-    </div>
-    <!-- アドバイスメッセージ -->
-    <div class="shutter__wrapper">
-      <div class="advice__message__wrapper">
-        <div v-show="activeMessage === 'advice__message1'"
-              v-bind:class="{advice__message: activeMessage === 'advice__message1',
-              message1: activeMessage === 'advice__message1'}">
-          <p><span class="instruction__word">F値を2.8に設定してみよう！</span>
-            <br>光の取り込み量が多くなるから星が映りやすくなるよ！
-          </p>
-        </div>
-        <div v-show="activeMessage === 'advice__message2'"
-              v-bind:class="{advice__message: activeMessage === 'advice__message2',
-              message2: activeMessage === 'advice__message2'}">
-          <p><span class="instruction__word">SSを30sに設定してみよう！</span>
-            <br>光を取り込む時間が長くなるから星が映りやすくなるよ！
-          </p>
-        </div>
-        <div v-show="activeMessage === 'advice__message3'"
-              v-bind:class="{advice__message: activeMessage === 'advice__message3',
-              message3: activeMessage === 'advice__message3'}">
-          <p><span class="instruction__word">ISOを1600に設定してみよう！</span>
-            <br>感度が高いと写真全体が明るくなって星が映りやすくなるよ！
-          </p>
-        </div>
-        <p class="onepoint">
-          <img id="onepoint" src="image/brightness3.png" alt="">
-          </img>
-          <!-- 暗くて何も見えない (_ _) -->
-        </p>
-      </div>
-      <div id="number" class="switch__wrapper">
-        <ul>
-          <li>
-            <p v-on:mouseover="activeTab = 'tabs-1',activeMessage = 'advice__message1'">F値：
-              <select name="keisan" id="f" class="toggle__value" onchange="toggle()">
-                <option value="1">22</option>
-                <option value="2">9.0</option>
-                <option value="3">2.8</option>
-              </select>
-            </p>
-          </li>
-          <li>
-            <p v-on:mouseover="activeTab = 'tabs-2',activeMessage = 'advice__message2'">SS：
-            <select name="" id="ss" class="toggle__value" onchange="toggle()">
-              <option value="1">1/125s</option>
-              <option value="2">15s</option>
-              <option value="3">30s</option>
-            </select>
-          </p>
-          </li>
-          <li>
-            <p v-on:mouseover="activeTab = 'tabs-3',activeMessage = 'advice__message3'">ISO：
-              <select name="" id="iso" class="toggle__value" onchange="toggle()">
-                <option value="1">100</option>
-                <option value="2">1600</option>
-                <option value="3">6400</option>
-              </select>
-            </p>
-          </li>
+<div id="practice" class="practice__wrapper">
+  <h2>満天の星空を撮ってみよう！</h2>
+  <div class="practice__content">
+    <!-- 用語解説タブ -->
+    <div class="word__explanation__wrapper">
+      <p class="tab__title">用語解説</p>
+      <div class="word__explanation__tab">
+        <ul class="tabs__menu">
+          <li class="tab__left"
+              v-bind:class="{active: activeTab === 'tabs-1'}"
+              v-on:click="activeTab = 'tabs-1'"
+          >F値</li>
+          <li v-bind:class="{active: activeTab === 'tabs-2'}"
+              v-on:click="activeTab = 'tabs-2'"
+          >SS</li>
+          <li class="tab__right"
+              v-bind:class="{active: activeTab === 'tabs-3'}"
+              v-on:click="activeTab = 'tabs-3'"
+          >ISO</li>
         </ul>
-        <span id="dummy__shutter"　class="btn shutter__btn"><i class="fa fa-camera" aria-hidden="true"></i>シャッター</span>
-        <div class="overlay">
-          <div class="popup-content"></div>
-        </div>
-        <div id="shutter">
-          <a href="image/scene1.png" class="btn shutter__btn popup"><i class="fa fa-camera" aria-hidden="true"></i>シャッター</a>
-        </div>
+        <section class="tabs__content">
+          <section v-show="activeTab === 'tabs-1'">
+            <p>F値は"絞り"とも言われる。
+              <br>
+              <span class="important__word">
+                ボケ量
+              </span>
+              と
+              <span class="important__word">
+                明るさ
+              </span>
+              をコントロール出来る。
+              <br><span class="only__underline">F値が小さくなるにつれて</span>
+              <br>・ボケやすくなる
+              <br>・写真全体が明るくなる
+            </p>
+          </section>
+          <section v-show="activeTab === 'tabs-2'">
+            <p>
+              SSはシャッタースピードの略。
+              <br>
+              <span class="important__word">
+                ブレ
+              </span>
+              と
+              <span class="important__word">
+                明るさ
+              </span>
+              をコントロール出来る。
+              <br><span class="only__underline">SSが長くなるにつれて</span>
+              <br>・ブレやすくなる
+              <br>・写真全体が明るくなる
+            </p>
+          </section>
+          <section v-show="activeTab === 'tabs-3'">
+            <p>
+              ISOは感度のこと。
+              <br>
+              <span class="important__word">
+                明るさ
+              </span>
+              をコントロール出来る。
+              <br><span class="only__underline">ISOが大きくなるにつれて</span>
+              <br>・ノイズが発生し写真に悪影響を与える
+              <br>・写真全体が明るくなる
+            </p>
+          </section>
+        </section>
       </div>
     </div>
-    <div class="btn__wrapper">
-      <a href="#" onclick="window.history.back()" class="btn scene1__page__btn">前に戻る</a>
-      <a href="top.html" class="btn scene1__page__btn">TOPページへ</a>
+    <!-- 撮影結果予想イメージ -->
+    <div class="preview__wrapper">
+      <image id="preview" class="preview__content" src="image/preview3.png"></image>
+      <p class="image__preview__text">撮影予想イメージ</p>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="main.js"></script>
+  <!-- アドバイスメッセージ -->
+  <div class="shutter__wrapper">
+    <div class="advice__message__wrapper">
+      <div v-show="activeMessage === 'advice__message1'"
+            v-bind:class="{advice__message: activeMessage === 'advice__message1',
+            message1: activeMessage === 'advice__message1'}">
+        <p><span class="instruction__word">F値を2.8に設定してみよう！</span>
+          <br>光の取り込み量が多くなるから星が映りやすくなるよ！
+        </p>
+      </div>
+      <div v-show="activeMessage === 'advice__message2'"
+            v-bind:class="{advice__message: activeMessage === 'advice__message2',
+            message2: activeMessage === 'advice__message2'}">
+        <p><span class="instruction__word">SSを30sに設定してみよう！</span>
+          <br>光を取り込む時間が長くなるから星が映りやすくなるよ！
+        </p>
+      </div>
+      <div v-show="activeMessage === 'advice__message3'"
+            v-bind:class="{advice__message: activeMessage === 'advice__message3',
+            message3: activeMessage === 'advice__message3'}">
+        <p><span class="instruction__word">ISOを1600に設定してみよう！</span>
+          <br>感度が高いと写真全体が明るくなって星が映りやすくなるよ！
+        </p>
+      </div>
+      <p class="onepoint">
+        <img id="onepoint" src="image/brightness3.png" alt="">
+        </img>
+        <!-- 暗くて何も見えない (_ _) -->
+      </p>
+    </div>
+    <div id="number" class="switch__wrapper">
+      <ul>
+        <li>
+          <p v-on:mouseover="activeTab = 'tabs-1',activeMessage = 'advice__message1'">F値：
+            <select name="keisan" id="f" class="toggle__value" onchange="toggle()">
+              <option value="1">22</option>
+              <option value="2">9.0</option>
+              <option value="3">2.8</option>
+            </select>
+          </p>
+        </li>
+        <li>
+          <p v-on:mouseover="activeTab = 'tabs-2',activeMessage = 'advice__message2'">SS：
+          <select name="" id="ss" class="toggle__value" onchange="toggle()">
+            <option value="1">1/125s</option>
+            <option value="2">15s</option>
+            <option value="3">30s</option>
+          </select>
+        </p>
+        </li>
+        <li>
+          <p v-on:mouseover="activeTab = 'tabs-3',activeMessage = 'advice__message3'">ISO：
+            <select name="" id="iso" class="toggle__value" onchange="toggle()">
+              <option value="1">100</option>
+              <option value="2">1600</option>
+              <option value="3">6400</option>
+            </select>
+          </p>
+        </li>
+      </ul>
+      <span id="dummy__shutter"　class="btn shutter__btn"><i class="fa fa-camera" aria-hidden="true"></i>シャッター</span>
+      <div class="overlay">
+        <p>星空</p>
+        <div class="popup-content">
+          <!-- <p>星空の撮影に成功したよ！</p> -->
+        </div>
+      </div>
+      <div id="shutter">
+        <a href="image/scene1.png" class="btn shutter__btn popup"><i class="fa fa-camera" aria-hidden="true"></i>シャッター</a>
+      </div>
+    </div>
+  </div>
+  <div class="btn__wrapper">
+    <a href="#" onclick="window.history.back()" class="btn scene1__page__btn">前に戻る</a>
+    <a href="top.html" class="btn scene1__page__btn">TOPページへ</a>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
