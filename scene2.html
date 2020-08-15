@@ -7,12 +7,12 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- <script src="router/main.js"></script> -->
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
-    <title>星空の練習</title>
+    <title>ボケの練習</title>
     <!-- <title>Camera Coach</title> -->
   </head>
 <body>
 <div id="practice" class="practice__wrapper">
-  <h2>満天の星空を撮ってみよう！</h2>
+  <h2>ボケ感のある写真を撮ってみよう！</h2>
   <div class="practice__content">
     <!-- 用語解説タブ -->
     <div class="word__explanation__wrapper">
@@ -94,14 +94,14 @@
             v-bind:class="{advice__message: activeMessage === 'advice__message1',
             message1: activeMessage === 'advice__message1'}">
         <p><span class="instruction__word">F値を2.8に設定してみよう！</span>
-          <br>光の取り込み量が多くなるから星が映りやすくなるよ！
+          <br>F値が小さくなるほどボケやすくなるよ！
         </p>
       </div>
       <div v-show="activeMessage === 'advice__message2'"
             v-bind:class="{advice__message: activeMessage === 'advice__message2',
             message2: activeMessage === 'advice__message2'}">
-        <p><span class="instruction__word">SSを30sに設定してみよう！</span>
-          <br>光を取り込む時間が長くなるから星が映りやすくなるよ！
+        <p><span class="instruction__word">SSを1/125sに設定してみよう！</span>
+          <br>手ブレせずに撮影できるよ！
         </p>
       </div>
       <div v-show="activeMessage === 'advice__message3'"
