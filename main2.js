@@ -28,7 +28,7 @@ function toggle(){
 
 
   if(sum2===11){
-    document.getElementById("preview__2").setAttribute("src","image/preview_2_1.jpg");
+    document.getElementById("preview__2").setAttribute("src","image/preview_2_1.png");
     // document.getElementById("onepoint").setAttribute("src","image/brightness3.png");
     dummy__shutter.style.display = "inline-block";
     // dummy__shutter.style.display = "none";
@@ -36,16 +36,16 @@ function toggle(){
     shutter.style.display = "none";
     // shutter.style.display = "block";
     // $('#onepoint').text("暗くて何も見えない (_ _)")
-  }else if(sum2 === 12 ) {
-    document.getElementById("preview__2").setAttribute("src","image/preview_2_2.jpg");
+  // }else if(sum2 === 12 ) {
+    // document.getElementById("preview__2").setAttribute("src","image/preview_2_2.jpg");
     // document.getElementById("onepoint").setAttribute("src","image/brightness4.png");
-    dummy__shutter.style.display = "inline-block";
-    dummy__shutter.style.opacity = "0.2";
-    shutter.style.display = "none";
+    // dummy__shutter.style.display = "inline-block";
+    // dummy__shutter.style.opacity = "0.2";
+    // shutter.style.display = "none";
     // $('#onepoint').text("まだまだ見えない ~_~;")
   　 }else if(sum2 === 13 ) {
     //シャッターを押せる設定
-    document.getElementById("preview__2").setAttribute("src","image/preview_2_3.jpg");
+    document.getElementById("preview__2").setAttribute("src","image/preview_2_3.png");
     // document.getElementById("onepoint").setAttribute("src","image/brightness8.png");
     shutter.style.display = "block";
     dummy__shutter.style.opacity = "1.0";

@@ -47,3 +47,13 @@
   transition: 0.2s ease-out;
   margin:0px 22px;
 }
+
+.overlay p{
+  background-color: rgb(59, 59, 59);
+  width:100%;
+  padding:60px 0 40px;
+  opacity: 0.9;
+  border-radius: 0px;
+  font-size:32px;
+  font-family: fantasy;
+}
