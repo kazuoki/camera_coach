@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scene2.css">
+    <link rel="stylesheet" href="response.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- <script src="router/main.js"></script> -->
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
@@ -111,11 +113,13 @@
           <br>感度が高いと写真全体が明るくなって星が映りやすくなるよ！
         </p>
       </div>
-      <p class="onepoint">
-        <img id="onepoint" src="image/brightness3.png" alt="">
-        </img>
-        <!-- 暗くて何も見えない (_ _) -->
-      </p>
+      <div>
+        <p class="onepoint">
+          <img id="onepoint" src="image/brightness3.png" alt="">
+          </img>
+          <!-- 暗くて何も見えない (_ _) -->
+        </p>
+      </div>
     </div>
     <div id="number" class="switch__wrapper">
       <ul>
@@ -149,9 +153,8 @@
       </ul>
       <span id="dummy__shutter"　class="btn shutter__btn"><i class="fa fa-camera" aria-hidden="true"></i>シャッター</span>
       <div class="overlay">
-        <p>星空</p>
+        <p>星空撮影に成功したよ！</p>
         <div class="popup-content">
-          <!-- <p>星空の撮影に成功したよ！</p> -->
         </div>
       </div>
       <div id="shutter">

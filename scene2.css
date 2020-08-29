@@ -1,0 +1,12 @@
+.practice__wrapper__2{
+  background-image: url("image/scene2-back.jpg");
+  min-height: 100vh;
+  text-align: center;
+  background-color: #c5c1d4;
+}
+.practice__wrapper__2 h2{
+  font-size:48px;
+  letter-spacing: 6px;
+  padding-top:5%;
+  padding-bottom:1%;
+}

@@ -207,7 +207,7 @@ h1,h2,p{
 
 /* ---------------撮影シーン１--------------- */
 .practice__wrapper{
-  background-image: url("image/scene2-back.jpg");
+  background-image: url("image/scene1-back.jpg");
   min-height: 100vh;
   text-align: center;
   background-color: #c5c1d4;
@@ -473,6 +473,16 @@ height: 0;
 
   /* マウスカーソルを手の形にする */
   cursor: pointer;
+}
+
+.overlay p{
+  background-color: rgb(59, 59, 59);
+  width:100%;
+  padding:60px 0 40px;
+  opacity: 0.9;
+  border-radius: 0px;
+  font-size:32px;
+  font-family: fantasy;
 }
 
 /* 拡大写真の表示エリア */

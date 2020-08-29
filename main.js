@@ -26,8 +26,10 @@ function toggle(){
     document.getElementById("preview").setAttribute("src","image/preview3.png");
     document.getElementById("onepoint").setAttribute("src","image/brightness3.png");
     dummy__shutter.style.display = "inline-block";
+    // dummy__shutter.style.display = "none";
     dummy__shutter.style.opacity = "0.1";
     shutter.style.display = "none";
+    // shutter.style.display = "block";
     // $('#onepoint').text("暗くて何も見えない (_ _)")
   }else if(sum === 4 ) {
     document.getElementById("preview").setAttribute("src","image/preview4.png");
