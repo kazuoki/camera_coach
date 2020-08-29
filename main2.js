@@ -10,93 +10,48 @@ document.getElementById("shutter").style.display ="none";
 
 
 function toggle(){
-  const number1 = document.getElementById("f").value;
-  // const number11 = document.getElementById("f_2").value;
-  const number2 = document.getElementById("ss").value;
-  const number3 = document.getElementById("iso").value;
-  const str1 = number1;
-  // const str11 = number11;
-  const str2 = number2;
-  const str3 = number3;
-  const result1 = Number( str1 ); //引数に文字列を代入
-  // const result11 = Number( str11 ); //引数に文字列を代入
-  const result2 = Number( str2 ); //引数に文字列を代入
-  const result3 = Number( str3 ); //引数に文字列を代入
-  const sum = result1+result2+result3;
-  // const sum2 = result11;
-  console.log(sum);
+  // const number1 = document.getElementById("f").value;
+  const number11 = document.getElementById("f_2").value;
+  // const number2 = document.getElementById("ss").value;
+  // const number3 = document.getElementById("iso").value;
+  // const str1 = number1;
+  const str11 = number11;
+  // const str2 = number2;
+  // const str3 = number3;
+  // const result1 = Number( str1 ); //引数に文字列を代入
+  const result11 = Number( str11 ); //引数に文字列を代入
+  // const result2 = Number( str2 ); //引数に文字列を代入
+  // const result3 = Number( str3 ); //引数に文字列を代入
+  // const sum = result1+result2+result3;
+  const sum2 = result11;
+  // console.log(sum);
 
-  if(sum===3){
-    document.getElementById("preview").setAttribute("src","image/preview3.png");
-    document.getElementById("onepoint").setAttribute("src","image/brightness3.png");
+
+  if(sum2===11){
+    document.getElementById("preview__2").setAttribute("src","image/preview_2_1.jpg");
+    // document.getElementById("onepoint").setAttribute("src","image/brightness3.png");
     dummy__shutter.style.display = "inline-block";
     // dummy__shutter.style.display = "none";
     dummy__shutter.style.opacity = "0.1";
     shutter.style.display = "none";
     // shutter.style.display = "block";
     // $('#onepoint').text("暗くて何も見えない (_ _)")
-  }else if(sum === 4 ) {
-    document.getElementById("preview").setAttribute("src","image/preview4.png");
-    document.getElementById("onepoint").setAttribute("src","image/brightness4.png");
+  }else if(sum2 === 12 ) {
+    document.getElementById("preview__2").setAttribute("src","image/preview_2_2.jpg");
+    // document.getElementById("onepoint").setAttribute("src","image/brightness4.png");
     dummy__shutter.style.display = "inline-block";
     dummy__shutter.style.opacity = "0.2";
     shutter.style.display = "none";
     // $('#onepoint').text("まだまだ見えない ~_~;")
-  }else if(sum === 5 ) {
-    document.getElementById("preview").setAttribute("src","image/preview5.png");
-    document.getElementById("onepoint").setAttribute("src","image/brightness5.png");
-    dummy__shutter.style.display = "inline-block";
-    dummy__shutter.style.opacity = "0.4";
-    shutter.style.display = "none";
-    // $('#onepoint').text("少し見えてきた ^o^")
-  }else if(sum === 6 ) {
-    document.getElementById("preview").setAttribute("src","image/preview6.png");
-    document.getElementById("onepoint").setAttribute("src","image/brightness6.png");
-    dummy__shutter.style.display = "inline-block";
-    dummy__shutter.style.opacity = "0.6";
-    shutter.style.display = "none";
-    // $('#onepoint').text("もう少し明るくしたいな ^^;")
-  }else if(sum === 7 ) {
-    document.getElementById("preview").setAttribute("src","image/preview7.png");
-    document.getElementById("onepoint").setAttribute("src","image/brightness7.png");
-    dummy__shutter.style.display = "inline-block";
-    dummy__shutter.style.opacity = "0.8";
-    shutter.style.display = "none";
-    // $('#onepoint').text("あと一段階だけ明るくしてみよ ^^")
-  　 }else if(sum === 8 ) {
+  　 }else if(sum2 === 13 ) {
     //シャッターを押せる設定
-    document.getElementById("preview").setAttribute("src","image/preview8.png");
-    document.getElementById("onepoint").setAttribute("src","image/brightness8.png");
+    document.getElementById("preview__2").setAttribute("src","image/preview_2_3.jpg");
+    // document.getElementById("onepoint").setAttribute("src","image/brightness8.png");
     shutter.style.display = "block";
     dummy__shutter.style.opacity = "1.0";
     dummy__shutter.style.display = "none";
     // $('#onepoint').text("シャッターを押してみよう！")
-  }else if(sum === 9 ) {
-    document.getElementById("preview").setAttribute("src","image/preview9.png");
-    document.getElementById("onepoint").setAttribute("src","image/brightness9.png");
-    dummy__shutter.style.display = "inline-block";
-    shutter.style.display = "none";
-    dummy__shutter.style.opacity = "0.8";
-    // $('#onepoint').text("明るくなりすぎちゃった ^^")
   }
-
-  // if(sum2===11){
-  //   document.getElementById("preview__2").setAttribute("src","image/preview_2_1.jpg");
-  //   dummy__shutter.style.display = "inline-block";
-  //   dummy__shutter.style.opacity = "0.1";
-  //   shutter.style.display = "none";
-  // }else if(sum2 === 12 ) {
-  //   document.getElementById("preview__2").setAttribute("src","image/preview_2_2.jpg");
-  //   dummy__shutter.style.display = "inline-block";
-  //   dummy__shutter.style.opacity = "0.2";
-  //   shutter.style.display = "none";
-  // 　 }else if(sum2 === 13 ) {
-  //   document.getElementById("preview__2").setAttribute("src","image/preview_2_3.jpg");
-  //   shutter.style.display = "block";
-  //   dummy__shutter.style.opacity = "1.0";
-  //   dummy__shutter.style.display = "none";
-  // }
-
 }
 
 
