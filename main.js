@@ -11,30 +11,23 @@ document.getElementById("shutter").style.display ="none";
 
 function toggle(){
   const number1 = document.getElementById("f").value;
-  // const number11 = document.getElementById("f_2").value;
   const number2 = document.getElementById("ss").value;
   const number3 = document.getElementById("iso").value;
   const str1 = number1;
-  // const str11 = number11;
   const str2 = number2;
   const str3 = number3;
   const result1 = Number( str1 ); //引数に文字列を代入
-  // const result11 = Number( str11 ); //引数に文字列を代入
   const result2 = Number( str2 ); //引数に文字列を代入
   const result3 = Number( str3 ); //引数に文字列を代入
   const sum = result1+result2+result3;
-  // const sum2 = result11;
   console.log(sum);
 
   if(sum===3){
     document.getElementById("preview").setAttribute("src","image/preview3.png");
     document.getElementById("onepoint").setAttribute("src","image/brightness3.png");
     dummy__shutter.style.display = "inline-block";
-    // dummy__shutter.style.display = "none";
     dummy__shutter.style.opacity = "0.1";
     shutter.style.display = "none";
-    // shutter.style.display = "block";
-    // $('#onepoint').text("暗くて何も見えない (_ _)")
   }else if(sum === 4 ) {
     document.getElementById("preview").setAttribute("src","image/preview4.png");
     document.getElementById("onepoint").setAttribute("src","image/brightness4.png");
