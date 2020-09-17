@@ -34,28 +34,24 @@ function toggle(){
     dummy__shutter.style.display = "inline-block";
     dummy__shutter.style.opacity = "0.2";
     shutter.style.display = "none";
-    // $('#onepoint').text("まだまだ見えない ~_~;")
   }else if(sum === 5 ) {
     document.getElementById("preview").setAttribute("src","image/preview5.png");
     document.getElementById("onepoint").setAttribute("src","image/brightness5.png");
     dummy__shutter.style.display = "inline-block";
     dummy__shutter.style.opacity = "0.4";
     shutter.style.display = "none";
-    // $('#onepoint').text("少し見えてきた ^o^")
   }else if(sum === 6 ) {
     document.getElementById("preview").setAttribute("src","image/preview6.png");
     document.getElementById("onepoint").setAttribute("src","image/brightness6.png");
     dummy__shutter.style.display = "inline-block";
     dummy__shutter.style.opacity = "0.6";
     shutter.style.display = "none";
-    // $('#onepoint').text("もう少し明るくしたいな ^^;")
   }else if(sum === 7 ) {
     document.getElementById("preview").setAttribute("src","image/preview7.png");
     document.getElementById("onepoint").setAttribute("src","image/brightness7.png");
     dummy__shutter.style.display = "inline-block";
     dummy__shutter.style.opacity = "0.8";
     shutter.style.display = "none";
-    // $('#onepoint').text("あと一段階だけ明るくしてみよ ^^")
   　 }else if(sum === 8 ) {
     //シャッターを押せる設定
     document.getElementById("preview").setAttribute("src","image/preview8.png");
@@ -63,14 +59,12 @@ function toggle(){
     shutter.style.display = "block";
     dummy__shutter.style.opacity = "1.0";
     dummy__shutter.style.display = "none";
-    // $('#onepoint').text("シャッターを押してみよう！")
   }else if(sum === 9 ) {
     document.getElementById("preview").setAttribute("src","image/preview9.png");
     document.getElementById("onepoint").setAttribute("src","image/brightness9.png");
     dummy__shutter.style.display = "inline-block";
     shutter.style.display = "none";
     dummy__shutter.style.opacity = "0.8";
-    // $('#onepoint').text("明るくなりすぎちゃった ^^")
   }
 
   // if(sum2===11){
