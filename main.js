@@ -66,15 +66,6 @@ function toggle(){
     shutter.style.display = "none";
     dummy__shutter.style.opacity = "0.8";
   }
-
-  //   shutter.style.display = "none";
-  // 　 }else if(sum2 === 13 ) {
-  //   document.getElementById("preview__2").setAttribute("src","image/preview_2_3.jpg");
-  //   shutter.style.display = "block";
-  //   dummy__shutter.style.opacity = "1.0";
-  //   dummy__shutter.style.display = "none";
-  // }
-
 }
 
 
