@@ -16,9 +16,9 @@ function toggle(){
   const str1 = number1;
   const str2 = number2;
   const str3 = number3;
-  const result1 = Number( str1 ); //引数に文字列を代入
-  const result2 = Number( str2 ); //引数に文字列を代入
-  const result3 = Number( str3 ); //引数に文字列を代入
+  const result1 = Number( str1 );
+  const result2 = Number( str2 );
+  const result3 = Number( str3 );
   const sum = result1+result2+result3;
   console.log(sum);
 
@@ -120,12 +120,7 @@ const showImage = (img) => {
   // 表示エリアの拡大アニメーション
   $('.popup-content').animate(
     {
-      // width: `${dispWidth}px`,
-      // height: `${dispHeight}px`,
-      // height: `480px`,
-      // 下記2つは上下左右中央に置くために必要
-      // 'margin-left': `${-dispWidth / 2}px`,
-      // 'margin-top': `${-dispHeight / 2}px`,
+
     },
     animDuration,
     'swing',
@@ -146,12 +141,7 @@ const showPopup = (imageUrl) => {
 
   // 画像表示エリアを小さな四角にする
   $('.popup-content').css({
-    // width: `${initialSize}px`,
-    // height: `${initialSize}px`,
-    // height: `480px`,
-    // 下記2つは上下左右中央に置くために必要
-    // 'margin-left': `${-initialSize / 2}px`,
-    // 'margin-top': `${-initialSize / 2}px`,
+
   });
 
   // img要素を作成して拡大画像をロードする
