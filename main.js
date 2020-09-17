@@ -67,15 +67,6 @@ function toggle(){
     dummy__shutter.style.opacity = "0.8";
   }
 
-  // if(sum2===11){
-  //   document.getElementById("preview__2").setAttribute("src","image/preview_2_1.jpg");
-  //   dummy__shutter.style.display = "inline-block";
-  //   dummy__shutter.style.opacity = "0.1";
-  //   shutter.style.display = "none";
-  // }else if(sum2 === 12 ) {
-  //   document.getElementById("preview__2").setAttribute("src","image/preview_2_2.jpg");
-  //   dummy__shutter.style.display = "inline-block";
-  //   dummy__shutter.style.opacity = "0.2";
   //   shutter.style.display = "none";
   // 　 }else if(sum2 === 13 ) {
   //   document.getElementById("preview__2").setAttribute("src","image/preview_2_3.jpg");
