@@ -4,13 +4,11 @@
     display:inline-block;
   }
   .word__explanation__wrapper{
-    /* text-align: center; */
     width:60%;
     margin:0 auto;
   }
   .word__explanation__tab{
-    /* width:80%;
-    margin:0 auto; */
+
   }
   .tabs__content{
     width:100%;
