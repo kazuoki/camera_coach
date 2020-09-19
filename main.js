@@ -107,9 +107,6 @@ const showImage = (img) => {
 
   // 画像の表示サイズをセット
   $img.css({
-    // width: `${dispWidth}px`,
-    // width: `70%`,
-    // height: `${dispHeight}px`,
     height: `480px`,
     display: 'none',
   });
