@@ -129,14 +129,14 @@ h1,h2,p{
 .top__wrapper h1{
   font-size:64px;
   letter-spacing: 6px;
-  padding-top:8%;
+  padding-top:6%;
   padding-bottom:44px;
 }
 .top__wrapper h2{
   font-size: 22px;
   letter-spacing: 3px;
   line-height: 48px;
-  margin-bottom: 8%;
+  margin-bottom: 3%;
 }
 .start__btn{
   background-color: #fff;
@@ -502,14 +502,25 @@ height: 0;
 }
 
 .top__button__wrapper{
-  margin-top:64px;
-  display: flex;
-  justify-content: center;
+  margin-top:120px;
+  margin-bottom:24px;
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+.top__button__wrapper p{
+  color: #fff;
+  margin-bottom:16px;
+  font-size: 16px;
+}
+.result__img img{
+  margin:24px;
+  border:1px solid rgba(255, 255, 255, 0.7);
 }
 
 .loading-icon {
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   margin-top: -25px;
   margin-left: -23px;
