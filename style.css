@@ -502,9 +502,7 @@ height: 0;
 }
 
 .top__button__wrapper{
-  /* text-align: center; */
-  /* width:640px; */
-  /* margin:0 auto; */
+  margin-top:64px;
   display: flex;
   justify-content: center;
 }
