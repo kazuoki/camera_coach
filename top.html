@@ -19,13 +19,9 @@
         <!-- <div class="row justify-content-center my-4"> -->
         <!-- <div> -->
           <!-- <header class="mb-5"> -->
-        <div>
-          <!-- <button class="btn start__btn"> -->
-            <a href="select.html" class="btn start__btn">さっそく撮影する</a>
-          <!-- </button> -->
-        </div>
+
         <div class="top__button__wrapper">
-          <h6>キーワードを入力して色んな作品を見てみよう！</h6>
+          <h6>まずはキーワードを入力して色んな作品に触れてみよう！</h6>
           <div>
             <form
               class="form-inline justify-content-center my-4"
@@ -52,31 +48,33 @@
             </form>
           </div>
         </div>
+
           <!-- </header> -->
         <!-- </div> -->
         <div class="row justify-content-center px-4">
-          <p v-if="isInitalized">検索してください。</p>
-          <p
-            v-show="isFetching"
-            class="position-relative mx-auto"
-          >
-            <span
-              class="loading-icon fas fa-sync"
-              aria-hidden="true"
+          <div class="serch__text">
+            <p v-if="isInitalized">検索してください。</p>
+            <p
+              v-show="isFetching"
+              class="position-relative mx-auto"
             >
-            </span>
-          </p>
-          <p v-show="isFailed">
-            データの取得に失敗しました。しばらく時間を置いてから、再度お試しください。
-          </p>
-          <!--
-              TODO: p要素を加える
-              このp要素は、「検索テキストに該当する写真データがない状態」のときに表示する
-            -->
-          <p v-show="isNotFound">
-            写真が見つかりませんでした。別の言葉で検索してみてください。
-          </p>
-
+              <span
+                class="loading-icon fas fa-sync"
+                aria-hidden="true"
+              >
+              </span>
+            </p>
+            <p v-show="isFailed">
+              データの取得に失敗しました。しばらく時間を置いてから、再度お試しください。
+            </p>
+            <!--
+                TODO: p要素を加える
+                このp要素は、「検索テキストに該当する写真データがない状態」のときに表示する
+              -->
+            <p v-show="isNotFound">
+              写真が見つかりませんでした。別の言葉で検索してみてください。
+            </p>
+          </div>
           <div class="result__img">
             <template v-if="isFound">
               <a
@@ -96,6 +94,11 @@
             </a>
             </template>
           </div>
+        </div>
+        <div>
+          <!-- <button class="btn start__btn"> -->
+            <a href="select.html" class="btn start__btn">さっそく撮影する</a>
+          <!-- </button> -->
         </div>
       </div>
       <!-- <div>
