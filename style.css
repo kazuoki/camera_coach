@@ -508,10 +508,10 @@ height: 0;
   /* justify-content: center; */
 }
 
-.top__button__wrapper p{
+.top__button__wrapper h6{
   color: #fff;
   margin-bottom:16px;
-  font-size: 16px;
+  /* font-size: 16px; */
 }
 .result__img img{
   margin:24px;
